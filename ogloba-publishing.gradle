@@ -1,0 +1,43 @@
+/**
+ * This is gradle script to publish artifacts to ogloba repository. See gradle.properties.sample for properties used.
+ * @author Jim
+ */
+
+apply plugin: 'maven-publish'
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
+
+}
+
+def getRepositoryUrlByBuildType = {
+    project.version.contains("SNAPSHOT") ?
+            "${oglobaRepositorySnapshotLocalUrl}" :
+            "${oglobaRepositoryReleaseLocalUrl}"
+}
+
+publishing {
+    repositories {
+
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+            url getRepositoryUrlByBuildType()
+            credentials {
+                username = "${oglobaRepositoryUsername}"
+                password = "${oglobaRepositoryPassword}"
+            }
+        }
+    }
+}

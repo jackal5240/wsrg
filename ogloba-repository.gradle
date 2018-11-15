@@ -1,0 +1,23 @@
+/**
+ * This is gradle script to use ogloba cache repository. See gradle.properties.sample for properties used.
+ * @author Jim
+ */
+
+apply plugin: 'maven'
+
+repositories {
+    maven {
+        credentials {
+            username "$oglobaRepositoryUsername"
+            password "$oglobaRepositoryPassword"
+        }
+        url "$oglobaRepositoryReleaseUrl"
+    }
+    maven {
+        credentials {
+            username "$oglobaRepositoryUsername"
+            password "$oglobaRepositoryPassword"
+        }
+        url "$oglobaRepositorySnapshotUrl"
+    }
+}

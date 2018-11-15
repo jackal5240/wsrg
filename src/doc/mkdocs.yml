@@ -1,0 +1,69 @@
+site_name: Project Documentation
+
+# Meta tags (placed in header)
+site_description: 
+#site_author: Your Name
+#site_url:
+
+# Repository (add link to repository on each page)
+#repo_name: solution-product-gateway
+#repo_url: http://github.com/you/solution-product-gateway
+#edit_uri: edit/master/src/doc
+
+#Copyright (shown at the footer)
+#copyright: 'Copyright &copy; 2017 Your Name'
+
+# Meterial theme
+theme: 'material'
+#extra:
+#  palette:
+#    primary: 'indigo'
+#    accent: 'indigo'
+
+#  social:
+#    - type: 'github'
+#      link: 'https://github.com/you'
+#    - type: 'twitter'
+#      link: 'https://twitter.com/you'
+
+
+# Google Analytics
+#google_analytics:
+#  - 'UA-111111111-1'
+#  - 'auto'
+
+use_directory_urls: false
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - footnotes
+  - meta
+  - toc(permalink=true)
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+
+pages:
+  - Home: index.md
+  - REST API Gateway Development Guide:
+      - Overview: REST API Gateway Development Guide/Overview.md
+      - Ogloba Application Installation: REST API Gateway Development Guide/Ogloba Application Installation.md
+      - Documentation: REST API Gateway Development Guide/Documentation.md
+      - Eclipse and gradle plugin integration: REST API Gateway Development Guide/Eclipse and gradle plugin integration.md
+      - Spring Boot mybatis integration: REST API Gateway Development Guide/Spring Boot mybatis integration.md
+      - Spring Boot 2: REST API Gateway Development Guide/Spring Boot 2.md
+      - Swagger: REST API Gateway Development Guide/Swagger Integration.md
+      - Spring 3 update to 5 and Spring Boot 2 Integration Tutorial: REST API Gateway Development Guide/Spring 3 update to 5 and Spring Boot 2 Integration Tutorial.md
+      - Spring Multi-Task: REST API Gateway Development Guide/Spring Multi-Task.md
+      - Deployment: REST API Gateway Development Guide/Deployment.md
+      
+      - Troubleshooting: REST API Gateway Development Guide/Troubleshooting.md
+      
+
+  - About:
+      - Release notes: about/history.md

@@ -1,0 +1,4 @@
+rootProject.name = 'wsrg'
+
+//includeBuild "D:/GitMavenToGradleProject/ew-common"
+//includeBuild "D:/GitProject/jap-common"

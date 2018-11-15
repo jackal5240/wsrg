@@ -1,0 +1,43 @@
+debug: true
+
+
+logging:
+  level:
+    root: debug
+spring:
+  application:
+    name: ew-wsrg
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    password: ew_dev
+    url: jdbc:oracle:thin:@192.168.1.27:1521:orcl
+    username: ew_dev
+server:
+  port: 8081
+  servlet:
+    context-path: /ew-wsrg
+#Mail Setting
+jap-common:
+  smtpServer: msa.hinet.net
+  smtpPort: 25
+  smtpUsername:
+  smtpPassword:
+  smtpAuth: false
+  smtpTls: false
+  smtpConnectionTimeout: 5000
+  smtpTimeout: 5000
+
+mybatis:
+  type-handlers-package: com.ogloba.ew.wsrg.mybatis.handler
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: 'null'
+  
+#Wsc
+#ew-wsc :
+#  alipay : 
+#    prodGatewayUrl : https://intlmapi.alipay.com/gateway.do
+#    testGatewayUrl : https://openapi.alipaydev.com/gateway.do
+#    enableTest : 1
+#    connectionTimeoutMillis : 5000
+#    readTimeoutMillis : 10000
